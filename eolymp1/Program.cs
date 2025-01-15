@@ -37,7 +37,7 @@
 //    double M = double.Parse(parts[2]);
 //    double D = double.Parse(parts[3]);
 //    double S = 1;
-//    if (K <= 1000 && K >= 0 && N <= 1000 && N >= 0 && M <= 1000 && M >= 0 && D <= 1000 && D >= 0)
+  //  if (K <= 1000 && K > 0 && N <= 1000 && N > 0 && M <= 1000 && M > 0 && D <= 1000 && D > 0)
 //    {
 //        S = K + N + M + D;
 //        if (K == N + M + D && N == S * 1 / 4 && M == S * 1 / 7 && D == S - K - N - M)
