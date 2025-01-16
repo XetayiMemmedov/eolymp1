@@ -26,26 +26,35 @@
 
 
 
-//string a = Console.ReadLine();
-//string[] parts = a.Split(' ');
-//if (parts.Length < 4)
-//    Console.WriteLine("Saylar tam daxil edilmeyib");
-//else
-//{
-//    double K = double.Parse(parts[0]);
-//    double N = double.Parse(parts[1]);
-//    double M = double.Parse(parts[2]);
-//    double D = double.Parse(parts[3]);
-//    double S = 1;
-  //  if (K <= 1000 && K > 0 && N <= 1000 && N > 0 && M <= 1000 && M > 0 && D <= 1000 && D > 0)
-//    {
-//        S = K + N + M + D;
-//        if (K == N + M + D && N == S * 1 / 4 && M == S * 1 / 7 && D == S - K - N - M)
-//            Console.WriteLine(S);
-//        else
-//            Console.WriteLine("-1");
-//    }
-//    else
-//        Console.WriteLine("-1");
-//}
+string a = Console.ReadLine();
+string[] parts = a.Split(' ');
+if (parts.Length < 4)
+    Console.WriteLine("Saylar tam daxil edilmeyib");
+else
+{
+    int K = int.Parse(parts[0]);
+    int N = int.Parse(parts[1]);
+    int M = int.Parse(parts[2]);
+    int D = int.Parse(parts[3]);
+    if (K <= 1000 && K > 0 && N <= 1000 && N > 0 && M <= 1000 && M > 0 && D <= 1000 && D > 0)
+    {
+        for (int i = 28; i <= 2000; i++)
+        {
+            int k=i/K;
+            int n=i/N;
+            int m=i/M;
+            if (i == k * K && i == n * N && i == m * M)
+            {
+                if (i / K + i / N + i / M + D - i == 0)
+                {
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+            
+        }
+    }
+    else
+        Console.WriteLine("-1");
+}
 
